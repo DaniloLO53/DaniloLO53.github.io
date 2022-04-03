@@ -5,78 +5,39 @@
 }
 
 :root{
-    --purple: #25083E;
-    --blue: #0D052A;
-    --sidebarWidth: 250px;
+    --green: #00dcb4;
+    --red: #5c141f;
+    --black: #1f1f1f;
+    --brown: #2b0000;
+    --sidebarWidth: 300px;
     --principalWidth: calc(100vw - var(--sidebarWidth));
 }
 
 body{
-    background-color: #0D052A;
+    background-color: var(--black);
 }
 
-#sidebar{
-    min-height: 100vh;
-    width: var(--sidebarWidth);
-    background-color: #25083E;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    float: left;
-
+a:visited{
+    text-decoration: none;
+    color: var(--black);
 }
 
-#perfil{
-    border-radius: 25%;
-    width: 200px;
 
-    margin-top: 30px;
 
-    box-shadow: 0 0px 5px #0D052A,
-                0 0px 10px #0D052A,
-                0 0px 15px white;
-}
 
-#description h2, #description p{
-    color: white;
-    margin-top: 30px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-
-    font-family: 'Great Vibes', cursive;
-    font-weight: 100;
-
-    font-size: 28px;
-}
-
-#description p{
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 15px;
-
-    font-size: 12px;
-}
-
-#menu{
-    /* position: fixed; */
+/* #menu{
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
 
-    width: 320px;
-    height: 45px;
-    border-radius: 20px;
+    width: 400px;
+    height: 80px;
+    border-radius: 30px;
 
     position: fixed;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -84,7 +45,7 @@ body{
 }
 
 #menu::before{
-     /* position: fixed; */
+     position: fixed;
      content: "";
      background-color: white;
      opacity: 0.5;
@@ -93,9 +54,9 @@ body{
      align-items: center;
      justify-content: space-evenly;
  
-     width: 320px;
-     height: 45px;
-     border-radius: 20px;
+     width: 400px;
+     height: 80px;
+     border-radius: 30px;
  
      position: fixed;
      bottom: 0px;
@@ -104,16 +65,131 @@ body{
 
 }
 
+*/
 .button{
-    font-size: 32px;
-    width: 60px;
+    font-size: 50px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(100vw + 80px);
+    top: 0;
+    /* background-color: red; */
+
+    transform-origin: -120px;
+    transform: rotate(calc(90deg + 30deg*var(--i)));
+    /* transform: rotate(90deg); */
+}
+
+
+
+.linkedin{
+    transform-origin: -118px;
+}
+
+.instagram{
+    transform-origin: -120px;
+}
+
+.github{
+    transform-origin: -130px;
+}
+
+.button a{
+    transform: rotate(calc(270deg + -30deg*var(--i)));
+    text-decoration: none;
+    color: var(--red);
+
+}
+
+
+
+
+.button:hover{
+    font-size: 48px;
+    top: -5px;
+}
+
+canvas{
+    position: fixed;
+    left: 100%;
+    transform: translate(-100%);
+    background-color: var(--black);
+    z-index: -1;
+
+
+}
+
+/* .indicator{
+    z-index: 60;
+    background-color: red;
+    height: 20px;
+    width: 200px;
+
+    transform-origin: -0;
+    transform: rotate(30deg);
+
+} */
+
+.wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+
+    height: 100vh;
+    width: 100vw;
 }
 
-.button:hover{
-    font-size: 36px;
-    top: -5px;
+.apresentation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+    max-width: 1000px;
+    height: 450px;
+
 }
+
+.firstPhrase{
+    font-family: monospace;
+    color: white;
+    font-size: 24px;
+    
+}
+
+.name{
+    display: flex;
+    font-size: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--green);
+    text-shadow: 0 0 40px white;
+    margin-left: -6px;
+}
+
+.firstName{
+    margin-right: 30px;
+}
+
+.secondPhrase{
+    color: white;
+    font-size: 80px;
+
+}
+
+.description{
+    width: 600px;
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+
+
+
+
+
+
+
